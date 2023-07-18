@@ -1,0 +1,148 @@
+/*
+	Selena Quintanilla Promotional Site
+	by Elizabeth Vazquez
+	Disclaimer: 
+		I do not own the rights to the images or videos displayed on 
+		this webpage. All rights belong to their respective owners.
+*/
+
+/* Dancing Script and Didact Gothic from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+/*============================================================================*/
+	/* CSS for body & html tags */
+
+body, html {
+	height: 100%;				/* full page height */
+	margin: 0;					/* prevent browser auto positioning */
+	background-color: #000000;	/* black background for webpage	*/
+}
+
+/*============================================================================*/
+	/* CSS for Landing */
+
+#landing {
+	height: 100%;
+	margin-bottom: 20vh;
+}
+
+/* Landing image of Selena */
+#landing div:first-of-type {
+	height: 100%;
+
+	background-image: url("images/pink-landing.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	opacity: 0.7;
+	box-shadow: inset 0px -800px 400px -400px #000000;
+}
+
+/* Flexbox for Selena's signature */
+#landing div:last-of-type {
+	position: absolute;
+	top: 0;
+
+	height: 100%;
+	width: 100%;
+}
+
+/* Selena's signature */
+#landing div:last-of-type img {
+	width: 50%;
+}
+
+/*============================================================================*/
+	/* CSS for flexboxes: Selena's signature & Type 1 sections */
+#landing div:last-of-type, .section-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*============================================================================*/
+	/* CSS for BOTH types of sections */
+
+.section-1, .section-2 {
+	border-style: dotted;
+	border-width: 1.5vh;
+	
+	margin: 0vh 20vh 10vh 20vh;
+	padding: 0vh 8vh 0vh 8vh;	
+}
+
+/*============================================================================*/
+	/* CSS for Type 1 Sections */
+
+.section-1 {
+	border-color: #E2D0CC;
+}
+
+.section-1 div {
+	width: 66%;
+	padding: 0 8vh 0 0;
+}
+
+.section-1 img {
+	width: 33%;
+}
+
+.section-1  p:last-of-type,
+.section-1 li:last-of-type,
+.section-2 div {
+	margin-bottom: 8vh;
+}
+
+/*============================================================================*/
+	/* CSS for Type 2 sections */
+
+.section-2 {
+	background-color: #42302F;
+}
+
+.section-2 div {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	gap: 3vh;
+}
+
+.section-2 div img {
+	width: 100%;
+    margin: auto;
+}
+
+/*============================================================================*/
+	/* CSS for Text tags */
+
+h1 {
+	font-family: 'Dancing Script';
+	font-size: 10vh;
+	color: #DC71B1;
+}
+
+ul {
+	list-style-type: "\1F497";
+}
+
+p, li {
+	font-family: 'Didact Gothic';
+	font-size: 2.5vh;
+	color: #FA86B1;
+}
+
+li {
+	margin-bottom: 1.6vh;
+	padding-left: 2vh;
+}
+
+/*============================================================================*/
+	/* CSS for Footer */
+
+footer { /*footer element*/
+	background-color: #42302F;
+	padding: 3vh;
+	text-align: center;
+}
