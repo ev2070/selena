@@ -40,11 +40,10 @@ body, html {
 	box-shadow: inset 0px -200px 100px -100px #000000;
 }
 
-/* Flexbox for Selena's signature */
+/* Selena's signature container */
 #landing div:last-of-type {
 	position: absolute;
 	top: 0;
-
 	height: 100%;
 	width: 100%;
 }
@@ -56,6 +55,7 @@ body, html {
 
 /*============================================================================*/
 	/* CSS for flexboxes: Selena's signature & Type 1 sections */
+
 #landing div:last-of-type, .section-1 {
 	display: flex;
 	justify-content: center;
@@ -105,13 +105,16 @@ body, html {
 .section-2 div {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	
 	gap: 3vh;
 }
 
 .section-2 div img {
 	width: 100%;
     margin: auto;
+}
+
+iframe {
+	width: 100%;
 }
 
 /*============================================================================*/
@@ -145,4 +148,66 @@ footer { /*footer element*/
 	background-color: #42302F;
 	padding: 3vh;
 	text-align: center;
+}
+
+/*============================================================================*/
+
+/* MEDIA QUERY (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+	/* Selena's signature at full width */
+	#landing div:last-of-type img {
+		width: 100%;
+	}
+
+	/* Decrease side margins for sections of both types	*/
+	.section-1, .section-2 {
+		margin: 0vh 5vh 10vh 5vh;	
+	}	
+
+	/* Decrease h1 font size and center*/
+	h1 {
+		font-size: 8vh;
+		text-align: center;
+	}
+
+	/* Sections of type 1 will not be flexboxes	*/
+	.section-1 {
+		display: block;
+	}
+
+	/* Content of section type 1 will have full width */
+	.section-1 div, .section-1 img {
+		width: 100%;
+	}
+
+	/* Decrease sections of type 1 paragraphs' & list items'
+	and sections of type 2 grids' bottom margin */
+	.section-1  p:last-of-type,
+	.section-1 li:last-of-type,
+	.section-2 div {
+		margin-bottom: 4vh;
+	}
+
+	/* Add bottom margin to images in sections of type 1 */
+	.section-1 img {
+		margin-bottom: 5vh;
+	}
+
+	/* Decrease sections' left and right padding */
+	.section-1, .section-2 {
+		padding: 0vh 5vh 0vh 5vh;	
+	}
+
+	/* Decrease left padding of unordered list */
+	ul {
+		padding: 0 0 0 3.25vh;
+	}
+
+	/* Make grids have two columns and decrease gap	*/
+	.section-2 div {
+		grid-template-columns: 1fr 1fr;
+		gap: 2vh;
+	}
+
 }
