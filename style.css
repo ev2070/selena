@@ -67,10 +67,10 @@ body, html {
 
 .section-1, .section-2 {
 	border-style: dotted;
-	border-width: 1.5vh;
+	border-width: 1vw;
 	
-	margin: 0vh 20vh 10vh 20vh;
-	padding: 0vh 8vh 0vh 8vh;	
+	margin: 0 10vw 10vh 10vw;
+	padding: 0 4vw;	
 }
 
 /*============================================================================*/
@@ -82,7 +82,7 @@ body, html {
 
 .section-1 div {
 	width: 66%;
-	padding: 0 8vh 0 0;
+	padding-right: 4vw;
 }
 
 .section-1 img {
@@ -105,7 +105,7 @@ body, html {
 .section-2 div {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	gap: 3vh;
+	gap: 1.4vw;
 }
 
 .section-2 div img {
@@ -138,7 +138,7 @@ p, li {
 
 li {
 	margin-bottom: 1.6vh;
-	padding-left: 2vh;
+	padding-left: 4vw;
 }
 
 /*============================================================================*/
@@ -146,34 +146,46 @@ li {
 
 footer { /*footer element*/
 	background-color: #42302F;
-	padding: 3vh;
+	padding: 3vh 0;
 	text-align: center;
 }
 
 /*============================================================================*/
+	/* CSS for MEDIA QUERY (phones, 480px and down) */
 
-/* MEDIA QUERY (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
 
 	/* Selena's signature at full width */
 	#landing div:last-of-type img {
 		width: 100%;
 	}
 
-	/* Decrease side margins for sections of both types	*/
+	/* Decrease side margins and dotted 
+	   border width for sections of both types */
 	.section-1, .section-2 {
-		margin: 0vh 5vh 10vh 5vh;	
+		margin: 0 2.5vw 10vh 2.5vw;
+		border-width: 2.25vw;
 	}	
 
 	/* Decrease h1 font size and center*/
 	h1 {
-		font-size: 8vh;
+		font-size: 5vh;
 		text-align: center;
+	}
+
+	/* Decrease p & li font size */
+	p, li {
+		font-size: 2vh;
 	}
 
 	/* Sections of type 1 will not be flexboxes	*/
 	.section-1 {
 		display: block;
+	}
+
+	/* Remove right padding	for text in sections of type 1 */
+	.section-1 div {
+		padding-right: 0;
 	}
 
 	/* Content of section type 1 will have full width */
@@ -191,23 +203,23 @@ footer { /*footer element*/
 
 	/* Add bottom margin to images in sections of type 1 */
 	.section-1 img {
-		margin-bottom: 5vh;
+		margin-bottom: 3vh;
 	}
 
 	/* Decrease sections' left and right padding */
 	.section-1, .section-2 {
-		padding: 0vh 5vh 0vh 5vh;	
+		padding: 0 5vw;	
 	}
 
 	/* Decrease left padding of unordered list */
 	ul {
-		padding: 0 0 0 3.25vh;
+		padding: 0 0 0 3.75vw;
 	}
 
 	/* Make grids have two columns and decrease gap	*/
 	.section-2 div {
 		grid-template-columns: 1fr 1fr;
-		gap: 2vh;
+		gap: 3vw;
 	}
 
 }
